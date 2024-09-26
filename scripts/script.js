@@ -42,8 +42,8 @@ async function loadJohtoPokemon() {
 async function loadData() {
   await loadKantoPokemons();
   // getTypes();
-  // console.log(pokemonsDataArray);
-  // console.log(pokemonSpeciesArray);
+  console.log(pokemonsDataArray);
+  console.log(pokemonSpeciesArray);
   renderSmallCards();
 }
 
