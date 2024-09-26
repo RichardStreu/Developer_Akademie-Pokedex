@@ -34,8 +34,3 @@ async function loadData() {
 
 // this function has to be assigned to the body as an onload listener when site is ready
 loadData();
-
-
-function getTypesAndAttributes() {
-
-}
