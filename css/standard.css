@@ -1,0 +1,17 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "roboto";
+  color: var(--color-fontColor);
+}
+
+.wrapper-content {
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
