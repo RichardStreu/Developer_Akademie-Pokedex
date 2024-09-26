@@ -11,7 +11,7 @@ const P = new Pokedex.Pokedex(customOptions);
 // pokemons got from API when load the site first time. Then pokemons are saved in cache and will be got from there
 let pokemonsDataArray = [];
 
-// load a defined number of pokemons from API or Cache and push them to pokemonsDataArray
+// load a defined number of pokemons from API or Cache and push them to pokemonsDataArray #
 async function loadPokemonsOnTheirID(start, end) {
   for (let i = start; i <= end; i++) {
     let pokemon = await P.getPokemonByName(i);
