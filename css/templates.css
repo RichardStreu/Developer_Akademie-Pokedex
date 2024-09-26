@@ -7,12 +7,13 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-  background-color: aqua;
 }
 .small-card-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 .pokemon-name {
   font-size: 1.25rem;
@@ -71,4 +72,5 @@
   width: auto;
   object-fit: cover;
   margin-bottom: 0.75rem;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
