@@ -26,8 +26,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0px 0.75rem 0 2px;
 }
 .small-card-types div {
+  color: white;
+}
+.small-card-first-type {
   display: flex;
   align-items: center;
   width: max-content;
@@ -38,9 +42,28 @@
   gap: 0.5rem;
   color: white;
 }
-.type-icon {
+.small-card-second-type {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0px 0.75rem 0 2px;
+  border-radius: 100vw;
+  height: 2rem;
+  gap: 0.5rem;
+  color: white;
+}
+.type-icon-box {
   height: 28px;
-  width: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type-icon {
+  height: 20px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 .small-card-img {
