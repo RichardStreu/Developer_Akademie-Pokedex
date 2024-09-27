@@ -76,6 +76,6 @@ function renderSmallCards() {
   for (let index = 0; index < currentPokemonsDataArray.length; index++) {
     let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index, delay);
     mainContentContainerRef.innerHTML += smallCard;
-    delay += 65;
+    delay += 100;
   }
 }

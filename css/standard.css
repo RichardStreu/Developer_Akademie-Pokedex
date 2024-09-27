@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   font-family: "roboto";
   color: var(--color-fontColor);
   position: relative;
+  /* overflow-x: hidden; */
 }
 
 .wrapper-content {
