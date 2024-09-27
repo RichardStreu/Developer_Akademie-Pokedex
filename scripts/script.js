@@ -15,6 +15,20 @@ let pokemonSpeciesArray = [];
 let currentPokemonsDataArray = [];
 let currentSpeciesDataArray = [];
 
+// funtions to show and hide loading spinner
+
+function showLoadingSpinner() {
+  document.getElementById("dialogLoadingSpinner").classList.remove("d-none");
+  document.getElementById("dialogBigCard").classList.add("d-none");
+  document.getElementById("mainContentContainer").classList.add("d-none");
+}
+
+function hideLoadingSpinner() {
+  document.getElementById("dialogLoadingSpinner").classList.add("d-none");
+  document.getElementById("dialogBigCard").classList.remove("d-none");
+  document.getElementById("mainContentContainer").classList.remove("d-none");
+}
+
 // load a defined number of pokemons from API or Cache and push them to pokemonsDataArray #
 async function loadPokemonsOnTheirID(start, end) {
   for (let i = start; i <= end; i++) {
@@ -40,27 +54,17 @@ async function loadJohtoPokemon() {
 }
 
 async function loadData() {
+  showLoadingSpinner();
   await loadKantoPokemons();
   // getTypes();
-  console.log(pokemonsDataArray);
-  console.log(pokemonSpeciesArray);
-  renderSmallCards();
+  // console.log(pokemonsDataArray);
+  // console.log(pokemonSpeciesArray);
+  await renderSmallCards();
+  hideLoadingSpinner();
 }
 
 // this function has to be assigned to the body as an onload listener when site is ready
 loadData();
-
-let types = [];
-
-// function getTypes() {
-//   for (let i = 0; i < pokemonsDataArray.length; i++) {
-//     let type = pokemonsDataArray[i].types[0].type.name;
-//     if (!types.includes(type)){
-//       types.push(type);
-//     }
-//   }
-//   console.log(types);
-// }
 
 function renderSmallCards() {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
