@@ -45,8 +45,8 @@ async function loadPokemonSpeciesOnID(start, end) {
 }
 
 async function loadKantoPokemons() {
-  await loadPokemonsOnTheirID(1, 151);
-  await loadPokemonSpeciesOnID(1, 151);
+  await loadPokemonsOnTheirID(1, 20);
+  await loadPokemonSpeciesOnID(1, 20);
 }
 
 async function loadJohtoPokemon() {
@@ -57,7 +57,7 @@ async function loadData() {
   showLoadingSpinner();
   await loadKantoPokemons();
   // getTypes();
-  // console.log(pokemonsDataArray);
+  console.log(pokemonsDataArray);
   // console.log(pokemonSpeciesArray);
   await renderSmallCards();
   hideLoadingSpinner();

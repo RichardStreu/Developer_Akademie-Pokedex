@@ -7,6 +7,32 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.small-card-container:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+  transform: scale(1.015);
+}
+.small-card-container:hover .small-card-img {
+  animation: pokeJump 0.25s ease-out forwards;
+}
+@keyframes pokeJump {
+  50% {
+    transform: translateY(-15px) translateX(-8px) scale(1.25);
+  }
+  100% {
+    transform: translateY(0px) translateX(-16px) scale(1.5);
+    filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.6));
+  }
+}
+.small-card-img {
+  height: 104px;
+  width: auto;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+  transition: all 0.25s ease-in-out;
 }
 .small-card-head {
   display: flex;
@@ -72,11 +98,4 @@
   height: 20px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-}
-.small-card-img {
-  height: 104px;
-  width: auto;
-  object-fit: cover;
-  margin-bottom: 0.75rem;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
