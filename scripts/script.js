@@ -68,12 +68,14 @@ loadData();
 
 function renderSmallCards() {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
+  let delay = 0;
   mainContentContainerRef.innerHTML = "";
   currentPokemonsDataArray = pokemonsDataArray;
   currentSpeciesDataArray = pokemonSpeciesArray;
 
   for (let index = 0; index < currentPokemonsDataArray.length; index++) {
-    let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
+    let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index, delay);
     mainContentContainerRef.innerHTML += smallCard;
+    delay += 65;
   }
 }

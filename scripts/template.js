@@ -1,6 +1,6 @@
-function getSmallPokemonCard(currPokeData, currSpecieData, index) {
+function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
   return `
-    <div class="small-card-container" style="background: ${typeData[currPokeData[index].types[0].type.name].backgroundColor};">
+    <div class="small-card-container" style="background: ${typeData[currPokeData[index].types[0].type.name].backgroundColor}; opacity: 0; animation-delay: ${delay}ms">
           <div class="small-card-head">
             <div class="pokemon-name">${currPokeData[index].name}</div>
             <div class="pokemon-id">#<span id="pokemonID">${currPokeData[index].id}</span></div>
