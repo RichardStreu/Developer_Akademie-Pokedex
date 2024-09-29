@@ -12,9 +12,8 @@
   </head>
   <body onload="">
     <!-- dialog loading spinner box -->
-    <div id="dialogLoadingSpinner" class="dialog-loading-spinner d-none">
+    <div id="dialogLoadingSpinner" class="d-none dialog-loading-spinner">
       <div class="loading-container">
-        <!-- <img src="./assets/img/pokeball-m.png" alt="Loading..." class="spinner pokeball-loading-spinner" /> -->
         <svg
           class="spinner pokeball-loading-spinner"
           width="100%"
@@ -49,6 +48,8 @@
         <div class="loading-text">Loading<span class="dots">...</span></div>
       </div>
     </div>
+    <!-- dialog big card container -->
+    <div id="dialogBigCard" class="d-none dialog-big-card"></div>
     <!-- HEADER -->
     <header>
       <div class="wrapper-content">
@@ -58,8 +59,6 @@
     </header>
     <!-- MAIN -->
     <main>
-      <!-- dialog big card container -->
-      <div id="dialogBigCard" class="dialog-big-card d-none"></div>
       <!-- small cards container -->
       <div id="mainContentContainer" class="wrapper-content main-content-container"></div>
     </main>

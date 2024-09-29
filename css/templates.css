@@ -108,3 +108,15 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+
+/* BIG CARD */
+
+.big-poke-card-container {
+  background-color: rgba(0, 255, 255, 0.377);
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

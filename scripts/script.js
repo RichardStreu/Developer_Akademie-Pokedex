@@ -19,13 +19,11 @@ let currentSpeciesDataArray = [];
 
 function showLoadingSpinner() {
   document.getElementById("dialogLoadingSpinner").classList.remove("d-none");
-  document.getElementById("dialogBigCard").classList.add("d-none");
   document.getElementById("mainContentContainer").classList.add("d-none");
 }
 
 function hideLoadingSpinner() {
   document.getElementById("dialogLoadingSpinner").classList.add("d-none");
-  document.getElementById("dialogBigCard").classList.remove("d-none");
   document.getElementById("mainContentContainer").classList.remove("d-none");
 }
 
@@ -44,9 +42,9 @@ async function loadPokemonSpeciesOnID(start, end) {
   }
 }
 
-async function loadKantoPokemons() {
-  await loadPokemonsOnTheirID(1, 20);
-  await loadPokemonSpeciesOnID(1, 20);
+async function loadKantoPokemons(start, end) {
+  await loadPokemonsOnTheirID(start, end);
+  await loadPokemonSpeciesOnID(start, end);
 }
 
 async function loadJohtoPokemon() {
@@ -55,17 +53,17 @@ async function loadJohtoPokemon() {
 
 async function loadData() {
   showLoadingSpinner();
-  await loadKantoPokemons();
-  // getTypes();
-  console.log(pokemonsDataArray);
+  await loadKantoPokemons(1, 20);
+  // console.log(pokemonsDataArray);
   // console.log(pokemonSpeciesArray);
-  await renderSmallCards();
+  renderSmallCards();
   hideLoadingSpinner();
 }
 
 // this function has to be assigned to the body as an onload listener when site is ready
 loadData();
 
+// RENDER SMALL CARDS ######################################################################
 function renderSmallCards() {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
   let delay = 0;
@@ -78,4 +76,17 @@ function renderSmallCards() {
     mainContentContainerRef.innerHTML += smallCard;
     delay += 100;
   }
+}
+
+// RENDER BIG CARD #########################################################################
+function renderAndShowBigCard(index) {
+  const dialogBigCardRef = document.getElementById("dialogBigCard");
+  dialogBigCardRef.innerHTML = "";
+  let scrollY = window.scrollY;
+  let scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.overflow = "hidden";
+  document.body.style.paddingRight = `${scrollBarWidth}px`;
+  let bigCard = getBigPokemonCard(pokemonsDataArray, pokemonSpeciesArray, index, scrollY);
+  dialogBigCardRef.innerHTML = bigCard;
+  dialogBigCardRef.classList.remove("d-none");
 }
