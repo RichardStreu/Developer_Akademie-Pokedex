@@ -4,6 +4,7 @@
   width: 100%;
   height: 100vh;
   background-color: rgb(43, 43, 43);
+  z-index: 5000;
 }
 
 .loading-container {
@@ -71,7 +72,7 @@ header {
   background-color: gray;
   display: flex;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -107,7 +108,6 @@ main {
   box-sizing: border-box;
   overflow-y: auto;
   min-height: 100vh;
-  margin-top: 72px;
 }
 
 .load-btn-container {
@@ -137,6 +137,7 @@ main {
 .btn-style-while-loading-pokemon {
   background-color: rgb(43, 43, 43);
   border: none;
+  cursor: default;
 }
 .load-btn-spinner {
   width: 64px;

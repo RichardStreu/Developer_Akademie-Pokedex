@@ -22,7 +22,7 @@ Welche Typen gibt es:
   > - [x] onclick funktion geben um render funktion auszuführen
   > - [x] currentPokemonData.length zum berechnen bzw als grundlegende anzahl zu nehmen, auf welche dann mehr geladen werden können
   > - [x] funktion so ergänzen, das der button während des ladens nicht nochmal gerück werden kann
-- [ ] loading spinner wird nicht mehr angezeigt!!! ---> Fix bug!
+- [x] loading spinner wird nicht mehr angezeigt!!! ---> Fix bug!
 - [ ] header positionieren.
 - [ ] input searchin field ddesign adding
 - [ ] implement a button to search the pokemon from input field

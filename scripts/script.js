@@ -20,11 +20,13 @@ let currentSpeciesDataArray = [];
 function showLoadingSpinner() {
   document.getElementById("dialogLoadingSpinner").classList.remove("d-none");
   document.getElementById("mainContentContainer").classList.add("d-none");
+  document.getElementById("loadBtnContainer").classList.add("d-none");
 }
 
 function hideLoadingSpinner() {
   document.getElementById("dialogLoadingSpinner").classList.add("d-none");
   document.getElementById("mainContentContainer").classList.remove("d-none");
+  document.getElementById("loadBtnContainer").classList.remove("d-none");
 }
 
 // load a defined number of pokemons from API or Cache and push them to pokemonsDataArray #
