@@ -118,6 +118,8 @@ function renderAndShowBigCard(index) {
   let bigCard = getBigPokemonCard(pokemonsDataArray, pokemonSpeciesArray, index, scrollY);
   dialogBigCardRef.innerHTML = bigCard;
   dialogBigCardRef.classList.remove("d-none");
+  console.log(currentPokemonsDataArray);
+  console.log(currentSpeciesDataArray);
 }
 
 function closeAndHideBigCard() {

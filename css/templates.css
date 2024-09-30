@@ -9,7 +9,7 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  animation: fadeIn 1s forwards;
+  /* animation: fadeIn 1s forwards; */
 }
 @keyframes fadeIn {
   from {
@@ -112,11 +112,44 @@
 /* BIG CARD */
 
 .big-poke-card-container {
-  background-color: rgba(0, 255, 255, 0.377);
-  width: 300px;
-  height: 500px;
+  /* background-color: rgba(0, 255, 255, 0.904); */
+  width: 375px;
+  height: 667px;
   position: absolute;
   /* top: 50%; */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 72px));
+  border: 2px solid black;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.big-card-upper-part {
+  height: 30%;
+  
+}
+.big-card-lower-part {
+  height: 70%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 2rem;
+}
+.big-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 2rem;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+.big-card-name-box {
+  text-transform: capitalize;
+  display: flex;
+  gap: 1rem;
+  
+}
+.big-card-image {
+  height: 176px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }

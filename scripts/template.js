@@ -1,9 +1,8 @@
 function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
-
   return `
     <div 
       class="small-card-container" 
-      style="background: ${typeData[currPokeData[index].types[0].type.name].backgroundColor}; opacity: 0; animation-delay: ${delay}ms"
+      style="background: ${typeData[currPokeData[index].types[0].type.name].backgroundColor}; opacity: 1; animation-delay: ${delay}ms"
       onclick="renderAndShowBigCard(${index})">
           <div class="small-card-head">
             <div class="pokemon-name">${currPokeData[index].name}</div>
@@ -16,10 +15,8 @@ function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
                 <div class="type-icon-box" style="background-color: ${typeData[currPokeData[index].types[0].type.name].color}">
                   <img class="type-icon" src="${typeData[currPokeData[index].types[0].type.name].iconLink}" alt="" />
                 </div>
-
                 <span class="type-description">${currPokeData[index].types[0].type.name}</span>
               </div>
-
               <!-- lower type box -->
                ${
                  currPokeData[index].types.length > 1
@@ -27,14 +24,11 @@ function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
                 <div class="type-icon-box" style="background-color: ${typeData[currPokeData[index].types[1].type.name].color}">
                   <img class="type-icon" src="${typeData[currPokeData[index].types[1].type.name].iconLink}" alt="" />
                 </div>
-
                 <span class="type-description">${currPokeData[index].types[1].type.name}</span>
               </div>`
                    : ""
-               }
-              
+               }              
             </div>
-
             <div class="small-card-img-box"><img class="small-card-img" src="${currPokeData[index].sprites.other.home.front_default}" alt="" /></div>
           </div>
         </div>
@@ -43,8 +37,20 @@ function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
 
 function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY) {
   return /*html*/ `
-    <div class="big-poke-card-container" style="top: calc(${scrollY}px + 50vh)">
-      <Div>This is a pokemon with the index ${index}</Div>
+    <div class="big-poke-card-container" style="top: calc(${scrollY}px + 50vh); background: ${
+    typeData[currPokeData[index].types[0].type.name].backgroundColorBigCard
+  }; box-shadow: 2px 4px 16px ${typeData[currPokeData[index].types[0].type.name].color};">
+      <div class="big-card-upper-part">
+        <div class="big-card-header">
+          <div class="big-card-skip-backwards"><</div>
+          <div class="big-card-name-box"><span>${currPokeData[index].name}</span>#${index}</div>
+          <div class="big-card-skip-forwards">></div>
+        </div>
+        <img class="big-card-image" src="${currPokeData[index].sprites.other.home.front_default}" alt="">
+      </div>
+      <div class="big-card-lower-part">
+
+      </div>
     </div>
   `;
 }
