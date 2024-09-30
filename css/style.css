@@ -72,7 +72,6 @@ header {
   background-color: gray;
   display: flex;
   align-items: center;
-  position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -80,6 +79,8 @@ header {
 header div {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 header div img {
   height: 48px;
@@ -90,6 +91,7 @@ header div img {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   border: none;
+  outline: none;
 }
 
 /* MAIN */
@@ -97,6 +99,7 @@ main {
   position: relative;
   background-color: rgb(43, 43, 43);
   width: 100%;
+  margin-top: 72px;
 }
 .main-content-container {
   display: flex;

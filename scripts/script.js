@@ -49,13 +49,14 @@ async function loadKantoPokemons(start, end) {
   await loadPokemonSpeciesOnID(start, end);
 }
 
-async function loadData(start, end) {
+async function initLoadData(start, end) {
   showLoadingSpinner();
   await loadKantoPokemons(start, end);
   // console.log(pokemonsDataArray);
   // console.log(pokemonSpeciesArray);
   initRenderSmallCards(start, end);
   hideLoadingSpinner();
+  document.getElementById("header").classList.add("position-fixed");
 }
 
 async function loadShowMorePokemon() {
@@ -76,7 +77,7 @@ async function loadShowMorePokemon() {
 }
 
 // this function has to be assigned to the body as an onload listener when site is ready
-loadData(1, 20);
+initLoadData(1, 20);
 
 // RENDER SMALL CARDS ######################################################################
 function initRenderSmallCards(start, end) {
@@ -96,8 +97,8 @@ function initRenderSmallCards(start, end) {
 function showRenderMoreCards(start, end) {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
   // let delay = 0;
-  currentPokemonsDataArray = pokemonsDataArray;
-  currentSpeciesDataArray = pokemonSpeciesArray;
+  // currentPokemonsDataArray = pokemonsDataArray;
+  // currentSpeciesDataArray = pokemonSpeciesArray;
 
   for (let index = start - 1; index < end; index++) {
     let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
@@ -123,4 +124,26 @@ function closeAndHideBigCard() {
   document.body.style.overflow = "";
   document.body.style.paddingRight = "";
   document.getElementById("dialogBigCard").classList.add("d-none");
+}
+
+// function search pokemon
+function searchAndShowPokemon() {
+  let searchInput = document.getElementById("headerSearchField").value.toLowerCase();
+  if (searchInput.length > 2) {
+    document.getElementById("mainContentContainer").innerHTML = "";
+    for (let index = 0; index < pokemonsDataArray.length; index++) {
+      if (pokemonsDataArray[index].name.startsWith(searchInput)) {
+        document.getElementById("mainContentContainer").innerHTML += renderSingleSmallCard(index);
+      }
+    }
+  } else {
+    let start = 1;
+    let end = currentPokemonsDataArray.length - 1;
+    initRenderSmallCards(start, end);
+  }
+}
+
+function renderSingleSmallCard(index) {
+  let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
+  return smallCard;
 }

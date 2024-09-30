@@ -1,4 +1,5 @@
 function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
+
   return `
     <div 
       class="small-card-container" 
