@@ -17,8 +17,8 @@ Welche Typen gibt es:
 - [x] funktion schreiben, mit der man das overlay wieder schließen kann
 - [x] hinbekommen, das der hintergrund nihct mehr scrollbar ist, wenn eine große einzelkarte angezeigt wird.
 - [ ] implement a button to load more pokemon
-  > - [ ] am fußende positionieren
-  > - [ ] desigen
+  > - [x] am fußende positionieren
+  > - [x] desigen
   > - [ ] onclick funktion geben um render funktion auszuführen
   > - [ ] currentPokemonData.length zum berechnen bzw als grundlegende anzahl zu nehmen, auf welche dann mehr geaden werden können
 - [ ] header positionieren.
