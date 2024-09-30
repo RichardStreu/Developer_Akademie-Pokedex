@@ -47,34 +47,50 @@ async function loadKantoPokemons(start, end) {
   await loadPokemonSpeciesOnID(start, end);
 }
 
-async function loadJohtoPokemon() {
-  await loadPokemonsOnTheirID(1, 151);
-}
-
-async function loadData() {
+async function loadData(start, end) {
   showLoadingSpinner();
-  await loadKantoPokemons(1, 20);
+  await loadKantoPokemons(start, end);
   // console.log(pokemonsDataArray);
   // console.log(pokemonSpeciesArray);
-  renderSmallCards();
+  initRenderSmallCards(start, end);
   hideLoadingSpinner();
 }
 
+async function loadShowMorePokemon() {
+  let start = currentPokemonsDataArray.length + 1;
+  let end = start + 19;
+  await loadKantoPokemons(start, end);
+  showRenderMoreCards(start, end);
+}
+
 // this function has to be assigned to the body as an onload listener when site is ready
-loadData();
+loadData(1, 20);
 
 // RENDER SMALL CARDS ######################################################################
-function renderSmallCards() {
+function initRenderSmallCards(start, end) {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
-  let delay = 0;
+  // let delay = 0;
   mainContentContainerRef.innerHTML = "";
   currentPokemonsDataArray = pokemonsDataArray;
   currentSpeciesDataArray = pokemonSpeciesArray;
 
-  for (let index = 0; index < currentPokemonsDataArray.length; index++) {
-    let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index, delay);
+  for (let index = start - 1; index < end; index++) {
+    let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
     mainContentContainerRef.innerHTML += smallCard;
-    delay += 100;
+    // delay += 100;
+  }
+}
+
+function showRenderMoreCards(start, end) {
+  let mainContentContainerRef = document.getElementById("mainContentContainer");
+  // let delay = 0;
+  currentPokemonsDataArray = pokemonsDataArray;
+  currentSpeciesDataArray = pokemonSpeciesArray;
+
+  for (let index = start - 1; index < end; index++) {
+    let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
+    mainContentContainerRef.innerHTML += smallCard;
+    // delay += 100;
   }
 }
 

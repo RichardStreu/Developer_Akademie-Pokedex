@@ -19,8 +19,10 @@ Welche Typen gibt es:
 - [ ] implement a button to load more pokemon
   > - [x] am fußende positionieren
   > - [x] desigen
-  > - [ ] onclick funktion geben um render funktion auszuführen
-  > - [ ] currentPokemonData.length zum berechnen bzw als grundlegende anzahl zu nehmen, auf welche dann mehr geaden werden können
+  > - [x] onclick funktion geben um render funktion auszuführen
+  > - [x] currentPokemonData.length zum berechnen bzw als grundlegende anzahl zu nehmen, auf welche dann mehr geladen werden können
+  > - [ ] funktion so ergänzen, das der button während des ladens nicht nochmal gerück werden kann
 - [ ] header positionieren.
 - [ ] input searchin field ddesign adding
 - [ ] implement a button to search the pokemon from input field
+- [ ] code function to search the pokemon
