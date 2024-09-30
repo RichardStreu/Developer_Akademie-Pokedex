@@ -71,6 +71,10 @@ header {
   background-color: gray;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 header div {
   display: flex;
@@ -101,12 +105,15 @@ main {
   row-gap: 1rem;
   padding: 1rem 1rem;
   box-sizing: border-box;
+  overflow-y: auto;
+  min-height: 100vh;
+  margin-top: 72px;
 }
 
 /* BIG CARD DIALOG */
 .dialog-big-card {
   position: absolute;
-  z-index: 1000;
+  z-index: 2000;
   background-color: rgba(155, 34, 119, 0.3);
   color: white;
   width: 100%;

@@ -9,6 +9,7 @@ body {
   color: var(--color-fontColor);
   position: relative;
   /* overflow-x: hidden; */
+  background-color: rgb(43, 43, 43);
 }
 
 .wrapper-content {

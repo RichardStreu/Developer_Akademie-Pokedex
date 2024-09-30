@@ -90,3 +90,9 @@ function renderAndShowBigCard(index) {
   dialogBigCardRef.innerHTML = bigCard;
   dialogBigCardRef.classList.remove("d-none");
 }
+
+function closeAndHideBigCard() {
+  document.body.style.overflow = "";
+  document.body.style.paddingRight = "";
+  document.getElementById("dialogBigCard").classList.add("d-none");
+}
