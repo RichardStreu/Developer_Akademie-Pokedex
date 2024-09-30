@@ -16,12 +16,13 @@ Welche Typen gibt es:
 
 - [x] funktion schreiben, mit der man das overlay wieder schließen kann
 - [x] hinbekommen, das der hintergrund nihct mehr scrollbar ist, wenn eine große einzelkarte angezeigt wird.
-- [ ] implement a button to load more pokemon
+- [x] implement a button to load more pokemon
   > - [x] am fußende positionieren
   > - [x] desigen
   > - [x] onclick funktion geben um render funktion auszuführen
   > - [x] currentPokemonData.length zum berechnen bzw als grundlegende anzahl zu nehmen, auf welche dann mehr geladen werden können
-  > - [ ] funktion so ergänzen, das der button während des ladens nicht nochmal gerück werden kann
+  > - [x] funktion so ergänzen, das der button während des ladens nicht nochmal gerück werden kann
+- [ ] loading spinner wird nicht mehr angezeigt!!! ---> Fix bug!
 - [ ] header positionieren.
 - [ ] input searchin field ddesign adding
 - [ ] implement a button to search the pokemon from input field

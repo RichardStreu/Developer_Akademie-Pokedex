@@ -116,18 +116,31 @@ main {
   padding: 1rem;
 }
 .load-next-poke-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "roboto";
   color: var(--color-fontColor);
-  padding: 0.5rem 1rem;
   border-radius: 1rem;
   border: 1px solid black;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  height: 72px;
+  aspect-ratio: 1 / 1;
 }
-.load-next-poke-btn:hover {
+.next-poke-btn-hover:hover {
   background-color: #ff421c;
   color: white;
-  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+.btn-style-while-loading-pokemon {
+  background-color: rgb(43, 43, 43);
+  border: none;
+}
+.load-btn-spinner {
+  width: 64px;
+  aspect-ratio: 1 / 1;
 }
 
 /* BIG CARD DIALOG */
@@ -139,5 +152,3 @@ main {
   width: 100%;
   height: 100%;
 }
-
-

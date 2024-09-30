@@ -10,7 +10,7 @@
     <link rel="icon" href="./assets/img/pokeball.png" />
     <title>Pokedex</title>
   </head>
-  <body onload="">
+  <body>
     <!-- dialog loading spinner box -->
     <div id="dialogLoadingSpinner" class="d-none dialog-loading-spinner">
       <div class="loading-container">
@@ -62,7 +62,48 @@
       <!-- small cards container -->
       <div id="mainContentContainer" class="wrapper-content main-content-container"></div>
     </main>
-    <div class="load-btn-container"><button onclick="loadShowMorePokemon()" id="loadNextPokeBtn" class="load-next-poke-btn">Show more Pokemon</button></div>
+    <div class="load-btn-container">
+      <button onclick="loadShowMorePokemon()" id="loadNextPokeBtn" class="load-next-poke-btn next-poke-btn-hover">
+        <span id="loadBtnText"
+          >Show <br />
+          me more <br />
+          Pokemon</span
+        >
+        <div id="loadBtnSpinnerBox" class="d-none">
+          <svg
+            class="spinner pokeball-loading-spinner load-btn-spinner"
+            width="100%"
+            height="100%"
+            viewBox="0 0 1080 1080"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve"
+            xmlns:serif="http://www.serif.com/"
+            style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+          >
+            <g transform="matrix(1,0,0,1,-1212.68,0)">
+              <g id="Ball" transform="matrix(1,0,0,1,1212.68,0)">
+                <rect x="0" y="0" width="1080" height="1080" style="fill: none" />
+                <path
+                  d="M1.284,502.5C20.568,221.931 254.571,0 540,0C825.429,0 1059.43,221.931 1078.72,502.5L685.266,502.5C668.597,437.834 609.841,390 540,390C470.159,390 411.403,437.834 394.734,502.5L1.284,502.5Z"
+                  style="fill: rgb(255, 51, 53)"
+                />
+                <path
+                  d="M1078.72,577.5C1059.43,858.069 825.429,1080 540,1080C254.571,1080 20.568,858.069 1.284,577.5L394.734,577.5C411.403,642.166 470.159,690 540,690C609.841,690 668.597,642.166 685.266,577.5L1078.72,577.5Z"
+                  style="fill: white"
+                />
+                <path
+                  d="M394.734,577.5L1.284,577.5C0.433,565.11 0,552.605 0,540C0,527.395 0.433,514.89 1.284,502.5L394.734,502.5C411.403,437.834 470.159,390 540,390C609.841,390 668.597,437.834 685.266,502.5L1078.72,502.5C1079.57,514.89 1080,527.395 1080,540C1080,552.605 1079.57,565.11 1078.72,577.5L685.266,577.5C668.597,642.166 609.841,690 540,690C470.159,690 411.403,642.166 394.734,577.5Z"
+                  style="fill: rgb(34, 34, 34)"
+                />
+                <circle cx="540" cy="540" r="100" style="fill: white" />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </button>
+    </div>
     <!-- FOOTER -->
     <footer>
       <div class="wrapper-content"></div>

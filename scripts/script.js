@@ -57,10 +57,20 @@ async function loadData(start, end) {
 }
 
 async function loadShowMorePokemon() {
+  document.getElementById("loadNextPokeBtn").setAttribute("disabled", "true");
+  document.getElementById("loadNextPokeBtn").classList.remove("next-poke-btn-hover");
+  document.getElementById("loadNextPokeBtn").classList.add("btn-style-while-loading-pokemon");
+  document.getElementById("loadBtnText").classList.add("d-none");
+  document.getElementById("loadBtnSpinnerBox").classList.remove("d-none");
   let start = currentPokemonsDataArray.length + 1;
   let end = start + 19;
   await loadKantoPokemons(start, end);
   showRenderMoreCards(start, end);
+  document.getElementById("loadBtnText").classList.remove("d-none");
+  document.getElementById("loadBtnSpinnerBox").classList.add("d-none");
+  document.getElementById("loadNextPokeBtn").removeAttribute("disabled");
+  document.getElementById("loadNextPokeBtn").classList.add("next-poke-btn-hover");
+  document.getElementById("loadNextPokeBtn").classList.remove("btn-style-while-loading-pokemon");
 }
 
 // this function has to be assigned to the body as an onload listener when site is ready
