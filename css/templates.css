@@ -112,11 +112,9 @@
 /* BIG CARD */
 
 .big-poke-card-container {
-  /* background-color: rgba(0, 255, 255, 0.904); */
   width: 375px;
   height: 667px;
   position: absolute;
-  /* top: 50%; */
   left: 50%;
   transform: translate(-50%, calc(-50% - 72px));
   border: 2px solid black;
@@ -127,6 +125,7 @@
   height: 30%;
 }
 .big-card-lower-image {
+  background-size: cover;
   height: 70%;
   border-radius: 2rem;
   overflow: hidden;
@@ -134,9 +133,8 @@
 .big-card-lower-part {
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.82) 40%, rgba(0, 0, 0, 0.94) 100%);
 }
-
 .big-card-header {
   display: flex;
   justify-content: space-between;
