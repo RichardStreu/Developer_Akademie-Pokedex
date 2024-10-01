@@ -53,9 +53,9 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY, habitat
       <div class="big-card-lower-image" style="background-image: url(${habitats[habitat].imgLink});">
         <div class="big-card-lower-part">
           <div class="navba-lower-part">
-            <button>Infos</button>
-            <button>About</button>
-            <button>Stats</button>
+            <button class="big-card-info-button">Infos</button>
+            <button class="big-card-info-button">About</button>
+            <button class="big-card-info-button">Stats</button>
           </div>
         </div>
       </div>
