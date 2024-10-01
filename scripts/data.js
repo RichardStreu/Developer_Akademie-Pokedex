@@ -132,20 +132,21 @@ const habitats = {
     imgLink: "./assets/img/urban.jpg",
   },
   sea: {
-    imgLink: "./assets/img/sea.jpg",
+    imgLink: "./assets/img/sea.png",
   },
-  rare: [
-    { name: "moltres", imgLink: "./assets/img/feuer.jpg" },
-    { name: "zapdos", imgLink: "./assets/img/blitz.png" },
-    { name: "mewtwo", imgLink: "./assets/img/mewtwo.png" },
-    { name: "articuno", imgLink: "./assets/img/eisberge.png" },
-    { name: "mew", imgLink: "./assets/img/mew.png" },
-    { name: "fallBack", imgLink: "./assets/img/BILD.jpg" },
-  ],
+  moltres: {
+    imgLink: "./assets/img/feuer.jpg",
+  },
+  zapdos: {
+    imgLink: "./assets/img/blitz.png",
+  },
+  mewtwo: {
+    imgLink: "./assets/img/mewtwo.png",
+  },
+  articuno: {
+    imgLink: "./assets/img/eisberge.png",
+  },
+  mew: {
+    imgLink: "./assets/img/mew.png",
+  },
 };
-
-// moltres = feuer;
-// zapdos = blitz;
-// mewtwo = mewtwo;
-// articuno = eis;
-// mew = mew;

@@ -35,7 +35,7 @@ function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
   `;
 }
 
-function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY) {
+function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY, habitat) {
   return /*html*/ `
     <div class="big-poke-card-container" style="top: calc(${scrollY}px + 50vh); background: ${
     typeData[currPokeData[index].types[0].type.name].backgroundColorBigCard
@@ -50,7 +50,7 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY) {
         <img class="big-card-image" src="${currPokeData[index].sprites.other.home.front_default}" alt="">
       </div>
       <!-- lower Part -->
-      <div class="big-card-lower-image">
+      <div class="big-card-lower-image" style="background-image: url(${habitats[habitat].imgLink});">
         <div class="big-card-lower-part">
           <div class="navba-lower-part">
             <button>Infos</button>
