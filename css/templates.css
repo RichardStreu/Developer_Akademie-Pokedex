@@ -125,7 +125,6 @@
 }
 .big-card-upper-part {
   height: 30%;
-  
 }
 .big-card-lower-part {
   height: 70%;
@@ -143,7 +142,24 @@
   text-transform: capitalize;
   display: flex;
   gap: 1rem;
-  
+}
+.big-card-skip-backwards {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+}
+.big-card-skip-backwards:hover {
+  transform: scale(1.25);
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.75));
+}
+.big-card-skip-forwards {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+}
+.big-card-skip-forwards:hover {
+  transform: scale(1.25);
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.75));
 }
 .big-card-image {
   height: 176px;

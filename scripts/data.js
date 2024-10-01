@@ -108,3 +108,44 @@ const typeData = {
     iconLink: "./assets/icons/dark.svg",
   },
 };
+
+const habitats = {
+  grassland: {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  mountain: {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  "waters-edge": {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  forest: {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  "rough-terrain": {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  cave: {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  urban: {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  sea: {
+    imgLink: "./assets/img/BILD.jpg",
+  },
+  rare: {
+    name1: "./assets/img/BILD.jpg",
+    name2: "./assets/img/BILD.jpg",
+    name3: "./assets/img/BILD.jpg",
+    name4: "./assets/img/BILD.jpg",
+    name5: "./assets/img/BILD.jpg",
+    fallBack: "./assets/img/BILD.jpg",
+  },
+};
+
+// moltres;
+// zaptos;
+// mewtwo;
+// articuno;
+// mew;

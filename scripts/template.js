@@ -40,16 +40,22 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY) {
     <div class="big-poke-card-container" style="top: calc(${scrollY}px + 50vh); background: ${
     typeData[currPokeData[index].types[0].type.name].backgroundColorBigCard
   }; box-shadow: 2px 4px 16px ${typeData[currPokeData[index].types[0].type.name].color};">
+      <!-- upper part -->
       <div class="big-card-upper-part">
         <div class="big-card-header">
-          <div class="big-card-skip-backwards"><</div>
-          <div class="big-card-name-box"><span>${currPokeData[index].name}</span>#${index}</div>
-          <div class="big-card-skip-forwards">></div>
+          <div onclick="skipBigCardBackwards(event, ${index})" id="bigCardSkipBackwards" class="big-card-skip-backwards"><</div>
+          <div class="big-card-name-box"><span>${currPokeData[index].name}</span>#${index + 1}</div>
+          <div onclick="skipBigCardForwards(event, ${index})" id="bigCardSkipForwards" class="big-card-skip-forwards">></div>
         </div>
         <img class="big-card-image" src="${currPokeData[index].sprites.other.home.front_default}" alt="">
       </div>
+      <!-- lower Part -->
       <div class="big-card-lower-part">
-
+        <div class="navba-lower-part">
+          <button>Infos</button>
+          <button>About</button>
+          <button>Stats</button>
+        </div>
       </div>
     </div>
   `;

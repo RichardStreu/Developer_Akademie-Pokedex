@@ -128,6 +128,28 @@ function closeAndHideBigCard() {
   document.getElementById("dialogBigCard").classList.add("d-none");
 }
 
+function skipBigCardForwards(event, index) {
+  event.stopPropagation();
+  if (index < pokemonsDataArray.length - 1) {
+    let nextIndex = index + 1;
+    renderAndShowBigCard(nextIndex);
+    console.log(nextIndex);
+  } else {
+    return;
+  }
+}
+
+function skipBigCardBackwards(event, index) {
+  event.stopPropagation();
+  if (index > 0) {
+    let lastIndex = index - 1;
+    renderAndShowBigCard(lastIndex);
+    console.log(lastIndex);
+  } else {
+    return;
+  }
+}
+
 // function search pokemon
 function searchAndShowPokemon() {
   let searchInput = document.getElementById("headerSearchField").value.toLowerCase();
@@ -149,3 +171,6 @@ function renderSingleSmallCard(index) {
   let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
   return smallCard;
 }
+
+console.log(pokemonsDataArray);
+console.log(pokemonSpeciesArray);
