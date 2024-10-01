@@ -108,18 +108,30 @@ function showRenderMoreCards(start, end) {
 }
 
 // RENDER BIG CARD #########################################################################
+function getHabitat(index) {
+  let habitat = "";
+  if (pokemonSpeciesArray[index].habitat.name == "rare") {
+    habitat = pokemonsDataArray[index].name;
+  } else {
+    habitat = pokemonSpeciesArray[index].habitat.name;
+  }
+  return habitat;
+}
+
 function renderAndShowBigCard(index) {
   const dialogBigCardRef = document.getElementById("dialogBigCard");
   dialogBigCardRef.innerHTML = "";
   let scrollY = window.scrollY;
   let scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  let habitat = getHabitat(index);
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${scrollBarWidth}px`;
-  let bigCard = getBigPokemonCard(pokemonsDataArray, pokemonSpeciesArray, index, scrollY);
+  let bigCard = getBigPokemonCard(pokemonsDataArray, pokemonSpeciesArray, index, scrollY, habitat);
   dialogBigCardRef.innerHTML = bigCard;
   dialogBigCardRef.classList.remove("d-none");
   console.log(currentPokemonsDataArray);
   console.log(currentSpeciesDataArray);
+  console.log(habitat);
 }
 
 function closeAndHideBigCard() {
@@ -171,6 +183,3 @@ function renderSingleSmallCard(index) {
   let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
   return smallCard;
 }
-
-console.log(pokemonsDataArray);
-console.log(pokemonSpeciesArray);
