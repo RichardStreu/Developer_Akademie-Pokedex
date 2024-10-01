@@ -111,41 +111,41 @@ const typeData = {
 
 const habitats = {
   grassland: {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/grassland.jpg",
   },
   mountain: {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/mountain.jpg",
   },
   "waters-edge": {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/waters-edge.jpg",
   },
   forest: {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/forest.jpg",
   },
   "rough-terrain": {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/rough-terrain.png",
   },
   cave: {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/cave.png",
   },
   urban: {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/urban.jpg",
   },
   sea: {
-    imgLink: "./assets/img/BILD.jpg",
+    imgLink: "./assets/img/sea.jpg",
   },
-  rare: {
-    name1: "./assets/img/BILD.jpg",
-    name2: "./assets/img/BILD.jpg",
-    name3: "./assets/img/BILD.jpg",
-    name4: "./assets/img/BILD.jpg",
-    name5: "./assets/img/BILD.jpg",
-    fallBack: "./assets/img/BILD.jpg",
-  },
+  rare: [
+    { name: "moltres", imgLink: "./assets/img/feuer.jpg" },
+    { name: "zapdos", imgLink: "./assets/img/blitz.png" },
+    { name: "mewtwo", imgLink: "./assets/img/mewtwo.png" },
+    { name: "articuno", imgLink: "./assets/img/eisberge.png" },
+    { name: "mew", imgLink: "./assets/img/mew.png" },
+    { name: "fallBack", imgLink: "./assets/img/BILD.jpg" },
+  ],
 };
 
-// moltres;
-// zaptos;
-// mewtwo;
-// articuno;
-// mew;
+// moltres = feuer;
+// zapdos = blitz;
+// mewtwo = mewtwo;
+// articuno = eis;
+// mew = mew;

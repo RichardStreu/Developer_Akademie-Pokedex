@@ -49,3 +49,5 @@ Welche Typen gibt es:
           HP [0], Attack [1], Defense [2], Special-Attack [3], Special-Defens [4], Speed [5]
           Pfad zum Attack Name: pokemonsDataArray["pokeIndex"].stats[2].stat.name = defense
           Pfad zur Attack Number: pokemonsDataArray["pokeIndex"].stats[2].base_stat = 49
+
+- [x] skip funktion für große karten erstellen

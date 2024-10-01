@@ -50,11 +50,13 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY) {
         <img class="big-card-image" src="${currPokeData[index].sprites.other.home.front_default}" alt="">
       </div>
       <!-- lower Part -->
-      <div class="big-card-lower-part">
-        <div class="navba-lower-part">
-          <button>Infos</button>
-          <button>About</button>
-          <button>Stats</button>
+      <div class="big-card-lower-image">
+        <div class="big-card-lower-part">
+          <div class="navba-lower-part">
+            <button>Infos</button>
+            <button>About</button>
+            <button>Stats</button>
+          </div>
         </div>
       </div>
     </div>
