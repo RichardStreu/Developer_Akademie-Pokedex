@@ -69,12 +69,13 @@
 /* HEADER */
 header {
   height: 72px;
-  background-color: gray;
+  background-color: #ff421c;
   display: flex;
   align-items: center;
   top: 0;
   z-index: 1000;
   width: 100%;
+  box-shadow: 0 2px 3px #ff421c;
 }
 header div {
   display: flex;

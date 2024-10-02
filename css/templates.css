@@ -198,3 +198,14 @@
   color: var(--color-fontWhite);
   text-decoration: underline;
 }
+
+/* BIG CARD LOWER CONTENT */
+
+.big-cart-lower-content {
+  background-color: aqua;
+  width: 100%;
+  max-height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  overflow-y: auto;
+}
