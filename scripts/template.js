@@ -103,36 +103,69 @@ function getBigCardAboutContent(index) {
 function getBigCardStatsContent(index) {
   return /*html*/ `
     <div class="big-card-stats-box">
-      <table class="statsTable">
-        <tr>
-          <td>Row 1, Cell 1</td>
-          <td>Row 1, Cell 2</td>
-          <td>Row 1, Cell 3</td>
+      <table class="stats-table">
+      <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr class="stats-row">
+          <td class="stats-description">HP</td>
+          <td class="stats-count">${pokemonsDataArray[index].stats[0].base_stat}</td>
+          <td>
+            <div class="stats-outer-bar">
+              <div class="stats-inner-bar" style="width: ${pokemonsDataArray[index].stats[0].base_stat}%;"></div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <td>Row 2, Cell 1</td>
-          <td>Row 2, Cell 2</td>
-          <td>Row 2, Cell 3</td>
+        <tr class="stats-row">
+          <td class="stats-description">Attack</td>
+          <td class="stats-count">${pokemonsDataArray[index].stats[1].base_stat}</td>
+          <td>
+            <div class="stats-outer-bar">
+              <div class="stats-inner-bar" style="width: ${pokemonsDataArray[index].stats[1].base_stat}%;"></div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <td>Row 3, Cell 1</td>
-          <td>Row 3, Cell 2</td>
-          <td>Row 3, Cell 3</td>
+        <tr class="stats-row">
+          <td class="stats-description">Defense</td>
+          <td class="stats-count">${pokemonsDataArray[index].stats[2].base_stat}</td>
+          <td>
+            <div class="stats-outer-bar">
+              <div class="stats-inner-bar" style="width: ${pokemonsDataArray[index].stats[2].base_stat}%;"></div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <td>Row 4, Cell 1</td>
-          <td>Row 4, Cell 2</td>
-          <td>Row 4, Cell 3</td>
+        <tr class="stats-row">
+          <td class="stats-description">Sp. Atk</td>
+          <td class="stats-count">${pokemonsDataArray[index].stats[3].base_stat}</td>
+          <td>
+            <div class="stats-outer-bar">
+              <div class="stats-inner-bar" style="width: ${pokemonsDataArray[index].stats[3].base_stat}%; background-color: ${
+    typeData[currentPokemonsDataArray[index].types[0].type.name].color
+  };"></div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <td>Row 5, Cell 1</td>
-          <td>Row 5, Cell 2</td>
-          <td>Row 5, Cell 3</td>
+        <tr class="stats-row">
+          <td class="stats-description">Sp. Def</td>
+          <td class="stats-count">${pokemonsDataArray[index].stats[4].base_stat}</td>
+          <td>
+            <div class="stats-outer-bar">
+              <div class="stats-inner-bar" style="width: ${pokemonsDataArray[index].stats[4].base_stat}%; background-color: ${
+    typeData[currentPokemonsDataArray[index].types[0].type.name].color
+  };"></div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <td>Row 6, Cell 1</td>
-          <td>Row 6, Cell 2</td>
-          <td>Row 6, Cell 3</td>
+        <tr class="stats-row">
+          <td class="stats-description">Speed</td>
+          <td class="stats-count">${pokemonsDataArray[index].stats[5].base_stat}</td>
+          <td>
+            <div class="stats-outer-bar">
+              <div class="stats-inner-bar" style="width: ${pokemonsDataArray[index].stats[5].base_stat}%;"></div>
+            </div>
+          </td>
         </tr>
       </table>
     </div>

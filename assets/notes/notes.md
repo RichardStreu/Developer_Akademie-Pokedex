@@ -55,6 +55,6 @@ Welche Typen gibt es:
           Speed [5]
 
           Pfad zum Attack Name: pokemonsDataArray["pokeIndex"].stats[2].stat.name = defense
-          Pfad zur Attack Number: pokemonsDataArray["pokeIndex"].stats[2].base_stat = 49
+          Pfad zur Attack Number: pokemonsDataArray[index].stats[2].base_stat = 49
 
 - [x] skip funktion für große karten erstellen

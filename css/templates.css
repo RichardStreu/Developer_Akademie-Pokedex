@@ -179,9 +179,10 @@
   transform: translateX(-50%);
 }
 .navba-lower-part {
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  padding: 0px 32px;
 }
 .big-card-info-button {
   font-family: "roboto";
@@ -239,5 +240,41 @@
   border-radius: 2rem;
 }
 
-.statsTable {
+.stats-table {
+  border: none;
+  font-size: 0.85rem;
+  width: 100%;
+  height: 75%;
+}
+.stats-row {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.stats-description {
+  color: var(--color-fontSmokeWhite);
+}
+.stats-count {
+  color: var(--color-fontWhite);
+}
+.stats-outer-bar {
+  height: 1rem;
+  width: 100%;
+  background-color: var(--color-fontSmokeWhite);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.stats-inner-bar {
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-fontWhite);
+}
+colgroup col:nth-child(1) {
+  width: 25%;
+}
+colgroup col:nth-child(2) {
+  width: 15%;
+}
+colgroup col:nth-child(3) {
+  width: 60%;
 }
