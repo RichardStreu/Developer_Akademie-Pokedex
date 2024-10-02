@@ -112,7 +112,7 @@ function getBigCardInfosContent(index) {
         <div class="measure-box">
           <div class="measurement">
             <img class="measure-img" src="./assets/icons/height.png">
-            <div class="measureNumber"><span>${currentPokemonsDataArray[index].height}</span><span>&ensp;m</span></div>
+            <div class="measureNumber"><span>${currentPokemonsDataArray[index].height / 10}</span><span>&ensp;m</span></div>
           </div>
           <div>Height</div>
         </div> 
@@ -120,7 +120,7 @@ function getBigCardInfosContent(index) {
         <div class="measure-box">
           <div class="measurement">
             <img class="measure-img" src="./assets/icons/weight.png">
-            <div class="measureNumber"><span>${currentPokemonsDataArray[index].weight}</span> <span>&ensp;kg</span></div>
+            <div class="measureNumber"><span>${currentPokemonsDataArray[index].weight / 10}</span> <span>&ensp;kg</span></div>
           </div>
           <div>Weight</div>
         </div>
