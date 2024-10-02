@@ -26,7 +26,7 @@ Welche Typen gibt es:
 - [x] header positionieren.
 - [x] input searchin field ddesign adding
 - [x] code function to search the pokemon
-- [ ] ich brauche eine übersicht was alles auf der big card angezeigt werden soll!, dies muss jetzt ausgearbeitet werden
+- [x] ich brauche eine übersicht was alles auf der big card angezeigt werden soll!, dies muss jetzt ausgearbeitet werden
 
   > - [ ] Info: Hier kommen folgende Dinge rein
 
@@ -36,7 +36,7 @@ Welche Typen gibt es:
           - [ ] Größe
           - [ ] Habitat
 
-  > - [ ] About: hier kommt ein Beschreibungstext rein, es wird mehrere sätze geben
+  > - [x] About: hier kommt ein Beschreibungstext rein, es wird mehrere sätze geben
 
           hier ist der hauptlink:
           pokemonSpeciesArray[0].flavor_text_entries[0].flavor_text = Satz 1
@@ -46,7 +46,13 @@ Welche Typen gibt es:
 
   > - [ ] Stats: in TabellenForm oder als Netz
 
-          HP [0], Attack [1], Defense [2], Special-Attack [3], Special-Defens [4], Speed [5]
+          HP [0]
+          Attack [1]
+          Defense [2]
+          Special-Attack [3],
+          Special-Defens [4]
+          Speed [5]
+
           Pfad zum Attack Name: pokemonsDataArray["pokeIndex"].stats[2].stat.name = defense
           Pfad zur Attack Number: pokemonsDataArray["pokeIndex"].stats[2].base_stat = 49
 

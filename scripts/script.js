@@ -144,17 +144,26 @@ function closeAndHideBigCard() {
 
 function renderBigCardInfos(event, index) {
   event.stopPropagation();
-  console.log("Infos mit Index: ", index);
+  let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
+  bigCartLowerContentRef.innerHTML = "";
+  let infosContent = getBigCardInfosContent(index);
+  bigCartLowerContentRef.innerHTML = infosContent;
 }
 
 function renderBigCardAbout(event, index) {
   event.stopPropagation();
-  console.log("About mit Index: ", index);
+  let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
+  bigCartLowerContentRef.innerHTML = "";
+  let aboutContent = getBigCardAboutContent(index);
+  bigCartLowerContentRef.innerHTML = aboutContent;
 }
 
 function renderBigCardStats(event, index) {
   event.stopPropagation();
-  console.log("Stats mit Index: ", index);
+  let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
+  bigCartLowerContentRef.innerHTML = "";
+  let statsContent = getBigCardStatsContent(index);
+  bigCartLowerContentRef.innerHTML = statsContent;
 }
 
 // skip between big cards

@@ -73,3 +73,33 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY, habitat
     </div>
   `;
 }
+
+function getBigCardInfosContent(index) {
+  return /*html*/ `
+    <div class="big-card-infos-box">
+
+    </div>
+  `;
+}
+
+function getBigCardAboutContent(index) {
+  return /*html*/ `
+    <div class="big-card-about-box">
+      <p>${pokemonSpeciesArray[index].flavor_text_entries[0].flavor_text.replace("\n", " ").replace("\f", " ")}</p>
+      <br>
+      <p>${pokemonSpeciesArray[index].flavor_text_entries[2].flavor_text.replace("\n", " ").replace("\f", " ")}</p>
+      <br>
+      <p>${pokemonSpeciesArray[index].flavor_text_entries[5].flavor_text.replace("\n", " ").replace("\f", " ")}</p>
+      <br>
+      <p>${pokemonSpeciesArray[index].flavor_text_entries[6].flavor_text.replace("\n", " ").replace("\f", " ")}</p>
+    </div>
+  `;
+}
+
+function getBigCardStatsContent(index) {
+  return /*html*/ `
+    <div class="big-card-stats-box">
+
+    </div>
+  `;
+}
