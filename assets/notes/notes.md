@@ -30,12 +30,12 @@ Welche Typen gibt es:
 
   > - [ ] Info: Hier kommen folgende Dinge rein
 
-          - [ ] Genera  pokemonSpeciesArray[index].genera[7].genus
-          - [ ] Type First
-          - [ ] Type Second
-          - [ ] Gewicht
-          - [ ] Größe
-          - [ ] Habitat
+          - [x] Genera  pokemonSpeciesArray[index].genera[7].genus
+          - [x] Type First
+          - [x] Type Second
+          - [x] Gewicht
+          - [x] Größe
+          - [x] Habitat
 
   > - [x] About: hier kommt ein Beschreibungstext rein, es wird mehrere sätze geben
 
@@ -58,3 +58,9 @@ Welche Typen gibt es:
           Pfad zur Attack Number: pokemonsDataArray[index].stats[2].base_stat = 49
 
 - [x] skip funktion für große karten erstellen
+- [x] skip funktion ergänzen, sodass man endlos skippen kann
+- [ ] stats bei big card anpassen, sodass jedes stat per funktion aufgerufen wird und immer der letzte stat stehen bleibt (globale variable anlegen wo letztes stat gespeichert wird, und dann ruft man das entsprechende aktuelle nach der letzten global geseicherten auf)
+- [ ] hover effekt von smallCards überarbeiten
+- [ ] padding von main content container erhöhen, sodass ein nach oben pfeil rechts platz hat
+- [ ] nachObenPfeil rechts einbinden
+- [ ] funktion für nach obenpfeil rechts schreiben - [ ] so das er sichtbar wird wenn ein stück gescrollt wurde - [ ] das wieder nach oben gescrollt wird beim klicken

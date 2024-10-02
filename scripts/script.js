@@ -179,23 +179,25 @@ function renderBigCardHabitat(event, index) {
 
 function skipBigCardForwards(event, index) {
   event.stopPropagation();
+  let nextIndex;
   if (index < pokemonsDataArray.length - 1) {
-    let nextIndex = index + 1;
+    nextIndex = index + 1;
     renderAndShowBigCard(nextIndex);
-    console.log(nextIndex);
   } else {
-    return;
+    nextIndex = 0;
+    renderAndShowBigCard(nextIndex);
   }
 }
 
 function skipBigCardBackwards(event, index) {
   event.stopPropagation();
+  let lastIndex;
   if (index > 0) {
-    let lastIndex = index - 1;
+    lastIndex = index - 1;
     renderAndShowBigCard(lastIndex);
-    console.log(lastIndex);
   } else {
-    return;
+    lastIndex = pokemonsDataArray.length - 1;
+    renderAndShowBigCard(lastIndex);
   }
 }
 
