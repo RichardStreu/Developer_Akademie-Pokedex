@@ -140,6 +140,25 @@ function closeAndHideBigCard() {
   document.getElementById("dialogBigCard").classList.add("d-none");
 }
 
+// render big card content
+
+function renderBigCardInfos(event, index) {
+  event.stopPropagation();
+  console.log("Infos mit Index: ", index);
+}
+
+function renderBigCardAbout(event, index) {
+  event.stopPropagation();
+  console.log("About mit Index: ", index);
+}
+
+function renderBigCardStats(event, index) {
+  event.stopPropagation();
+  console.log("Stats mit Index: ", index);
+}
+
+// skip between big cards
+
 function skipBigCardForwards(event, index) {
   event.stopPropagation();
   if (index < pokemonsDataArray.length - 1) {

@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "roboto";
   src: url("../assets/fonts/Roboto-Black.ttf");
@@ -6,7 +5,7 @@
 
 :root {
   --color-fontColor: rgba(30, 30, 30, 1);
+  --color-fontWhite: white;
+  --color-fontSmokeWhite: rgb(186, 186, 186);
   --color-headerBackgroundcolor: rgb(203, 189, 189);
 }
-
-
