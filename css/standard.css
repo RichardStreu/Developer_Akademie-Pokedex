@@ -29,7 +29,10 @@ body {
   position: fixed;
 }
 
+.flex-column {
+  flex-direction: column;
+}
 
-.arsch {
-  background-color: #599c53 ;
+.flex-row {
+  flex-direction: row;
 }

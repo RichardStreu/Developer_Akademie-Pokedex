@@ -45,7 +45,7 @@ Welche Typen gibt es:
           pokemonSpeciesArray[0].flavor_text_entries[5].flavor_text = Satz 3
           pokemonSpeciesArray[0].flavor_text_entries[6].flavor_text = Satz 4
 
-  > - [ ] Stats: in TabellenForm oder als Netz
+  > - [x] Stats: in TabellenForm oder als Netz
 
           HP [0]
           Attack [1]

@@ -1,5 +1,5 @@
 function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
-  return `
+  return /*HTML*/ `
     <div 
       class="small-card-container" 
       style="background: ${typeData[currPokeData[index].types[0].type.name].backgroundColor}; opacity: 1; animation-delay: ${delay}ms"
@@ -9,7 +9,7 @@ function getSmallPokemonCard(currPokeData, currSpecieData, index, delay) {
             <div class="pokemon-id">#<span id="pokemonID">${currPokeData[index].id}</span></div>
           </div>
           <div class="small-card-main">
-            <div class="small-card-types">
+            <div class="small-card-types lex-column">
               <!-- upper type box -->
               <div class="small-card-first-type">
                 <div class="type-icon-box" style="background-color: ${typeData[currPokeData[index].types[0].type.name].color}">
@@ -80,8 +80,35 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY, habitat
 
 function getBigCardInfosContent(index) {
   return /*html*/ `
-    <div class="big-card-infos-box">
+    <div class="big-card-infos-box flex-column">
 
+      <div class="infos-genera">
+        ${pokemonSpeciesArray[index].genera[7].genus}
+      </div>
+              
+      <div class="infos-type-box flex-row">
+
+        <div class="small-card-first-type" style="background-color: var(--color-fontSmokeWhite)">
+          <div class="type-icon-box" style="background-color: ${typeData[currentPokemonsDataArray[index].types[0].type.name].color}">
+            <img class="type-icon" src="${typeData[currentPokemonsDataArray[index].types[0].type.name].iconLink}" alt=""/>
+          </div>
+          <span class="type-description">${currentPokemonsDataArray[index].types[0].type.name}</span>
+        </div>
+        <!-- lower type box -->
+        ${
+          currentPokemonsDataArray[index].types.length > 1
+            ? `<div id="smallCardSecondType" class="small-card-second-type" style="background-color: var(--color-fontSmokeWhite)">
+        <div class="type-icon-box" style="background-color: ${typeData[currentPokemonsDataArray[index].types[1].type.name].color}">
+        <img class="type-icon" src="${typeData[currentPokemonsDataArray[index].types[1].type.name].iconLink}" alt="" />
+        </div>
+        <span class="type-description">${currentPokemonsDataArray[index].types[1].type.name}</span>
+        </div>`
+            : ""
+        }              
+        
+      </div>
+        
+        
     </div>
   `;
 }

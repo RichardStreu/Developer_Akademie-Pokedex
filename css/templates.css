@@ -216,6 +216,18 @@
   line-height: 1.25rem;
   user-select: none;
 }
+
+.big-card-infos-box {
+  display: flex;
+  align-items: center;
+}
+.infos-type-box {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1.5rem;
+}
+
 .big-card-habitat-box {
   display: flex;
   flex-direction: column;
@@ -226,7 +238,7 @@
   font-size: 1rem;
   color: var(--color-fontWhite);
   margin-top: 1rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-fontSmokeWhite);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
