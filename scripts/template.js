@@ -94,6 +94,7 @@ function getBigCardInfosContent(index) {
           </div>
           <span class="type-description">${currentPokemonsDataArray[index].types[0].type.name}</span>
         </div>
+
         <!-- lower type box -->
         ${
           currentPokemonsDataArray[index].types.length > 1
@@ -107,8 +108,23 @@ function getBigCardInfosContent(index) {
         }              
         
       </div>
-        
-        
+      <div class="weight-height-box">
+        <div class="measure-box">
+          <div class="measurement">
+            <img class="measure-img" src="./assets/icons/height.png">
+            <div class="measureNumber"><span>${currentPokemonsDataArray[index].height}</span><span>&ensp;m</span></div>
+          </div>
+          <div>Height</div>
+        </div> 
+        <div class="divider"></div>
+        <div class="measure-box">
+          <div class="measurement">
+            <img class="measure-img" src="./assets/icons/weight.png">
+            <div class="measureNumber"><span>${currentPokemonsDataArray[index].weight}</span> <span>&ensp;kg</span></div>
+          </div>
+          <div>Weight</div>
+        </div>
+      </div>
     </div>
   `;
 }
