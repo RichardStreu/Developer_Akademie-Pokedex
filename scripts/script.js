@@ -166,6 +166,15 @@ function renderBigCardStats(event, index) {
   bigCartLowerContentRef.innerHTML = statsContent;
 }
 
+function renderBigCardHabitat(event, index) {
+  event.stopPropagation();
+  let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
+  bigCartLowerContentRef.innerHTML = "";
+  let habitat = getHabitat(index);
+  let habitatContent = getBigCardHabitatContent(index, habitat);
+  bigCartLowerContentRef.innerHTML = habitatContent;
+}
+
 // skip between big cards
 
 function skipBigCardForwards(event, index) {

@@ -111,42 +111,55 @@ const typeData = {
 
 const habitats = {
   grassland: {
+    habitatCall: "Grassland",
     imgLink: "./assets/img/grassland.jpg",
   },
   mountain: {
+    habitatCall: "Mountain",
     imgLink: "./assets/img/mountain.jpg",
   },
   "waters-edge": {
+    habitatCall: "Waters Edge",
     imgLink: "./assets/img/waters-edge.jpg",
   },
   forest: {
+    habitatCall: "Forest",
     imgLink: "./assets/img/forest.jpg",
   },
   "rough-terrain": {
+    habitatCall: "Rough Terrain",
     imgLink: "./assets/img/rough-terrain.png",
   },
   cave: {
+    habitatCall: "Cave",
     imgLink: "./assets/img/cave.png",
   },
   urban: {
+    habitatCall: "Urban",
     imgLink: "./assets/img/urban.jpg",
   },
   sea: {
+    habitatCall: "Sea",
     imgLink: "./assets/img/sea.png",
   },
   moltres: {
+    habitatCall: "Fire",
     imgLink: "./assets/img/feuer.jpg",
   },
   zapdos: {
+    habitatCall: "Lightning",
     imgLink: "./assets/img/blitz.png",
   },
   mewtwo: {
+    habitatCall: "Abandoned Lab",
     imgLink: "./assets/img/mewtwo.png",
   },
   articuno: {
+    habitatCall: "Ice",
     imgLink: "./assets/img/eisberge.png",
   },
   mew: {
+    habitatCall: "Mysterious Island",
     imgLink: "./assets/img/mew.png",
   },
 };

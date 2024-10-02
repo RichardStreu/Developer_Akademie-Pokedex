@@ -30,6 +30,7 @@ Welche Typen gibt es:
 
   > - [ ] Info: Hier kommen folgende Dinge rein
 
+          - [ ] Genera  pokemonSpeciesArray[index].genera[7].genus
           - [ ] Type First
           - [ ] Type Second
           - [ ] Gewicht

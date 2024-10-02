@@ -65,6 +65,10 @@ function getBigPokemonCard(currPokeData, currSpecieData, index, scrollY, habitat
                     onclick="renderBigCardStats(event, ${index})">
                     Stats
             </button>
+            <button class="big-card-info-button"
+                    onclick="renderBigCardHabitat(event, ${index})">
+                    Habitat
+            </button>
           </div>
           <!-- lower part content -->
           <div id="bigCartLowerContent" class="big-cart-lower-content"></div>
@@ -99,7 +103,50 @@ function getBigCardAboutContent(index) {
 function getBigCardStatsContent(index) {
   return /*html*/ `
     <div class="big-card-stats-box">
+      <table class="statsTable">
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 3, Cell 1</td>
+          <td>Row 3, Cell 2</td>
+          <td>Row 3, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 4, Cell 1</td>
+          <td>Row 4, Cell 2</td>
+          <td>Row 4, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 5, Cell 1</td>
+          <td>Row 5, Cell 2</td>
+          <td>Row 5, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 6, Cell 1</td>
+          <td>Row 6, Cell 2</td>
+          <td>Row 6, Cell 3</td>
+        </tr>
+      </table>
+    </div>
+  `;
+}
 
+function getBigCardHabitatContent(index, habitat) {
+  return /*html*/ `
+    <div class="big-card-habitat-box">
+      <p>The habitat of <span style="text-transform: capitalize">${pokemonsDataArray[index].name}</span> is</p>
+      <div class="habitats-box-habitat">${habitats[habitat].habitatCall}</div>
+      <img class="habitat-box-image" 
+        src="${habitats[habitat].imgLink}" alt=""
+        style="box-shadow: 0 0 8px ${typeData[currentPokemonsDataArray[index].types[0].type.name].color}">
     </div>
   `;
 }
