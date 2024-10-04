@@ -158,3 +158,19 @@ main {
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 396px) {
+  .big-poke-card-container {
+    width: calc(100% - 16px);
+  }
+  .big-card-header {
+    font-size: 1.75rem;
+    padding: 32px 16px;
+  }
+  .big-card-skip-backwards {
+    font-size: 2.5rem;
+  }
+  .big-card-skip-forwards {
+    font-size: 2.5rem;
+  }
+}
