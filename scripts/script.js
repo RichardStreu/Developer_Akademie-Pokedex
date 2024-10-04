@@ -3,7 +3,7 @@ const customOptions = {
   hostName: "pokeapi.co",
   versionPath: "/api/v2/",
   cache: true,
-  timeout: 5 * 1000, // 5s
+  timeout: 5 * 1000,
   cacheImages: true,
 };
 const P = new Pokedex.Pokedex(customOptions);
@@ -14,6 +14,8 @@ let pokemonSpeciesArray = [];
 
 let currentPokemonsDataArray = [];
 let currentSpeciesDataArray = [];
+
+let lastBigCardContent = "";
 
 // funtions to show and hide loading spinner
 
@@ -129,6 +131,7 @@ function renderAndShowBigCard(index) {
   let bigCard = getBigPokemonCard(pokemonsDataArray, pokemonSpeciesArray, index, scrollY, habitat);
   dialogBigCardRef.innerHTML = bigCard;
   dialogBigCardRef.classList.remove("d-none");
+  renderBigCardContent(lastBigCardContent, index);
 }
 
 function closeAndHideBigCard() {
@@ -139,48 +142,84 @@ function closeAndHideBigCard() {
 
 // render big card content
 
-let lastBigCardContent = "infos";
-
 function renderBigCardContent(content, index) {
   if (content == "about") {
+    renderBigCardAbout(index);
+  } else if (content == "stats") {
+    renderBigCardStats(index);
+  } else if (content == "habitat") {
+    renderBigCardHabitat(index);
+  } else {
+    renderBigCardInfos(index);
   }
 }
 
-function renderBigCardInfos(event, index) {
-  event.stopPropagation();
+function renderBigCardInfos(index) {
   let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
   bigCartLowerContentRef.innerHTML = "";
   let infosContent = getBigCardInfosContent(index);
   bigCartLowerContentRef.innerHTML = infosContent;
   lastBigCardContent = "infos";
+  removeHighlightingFromButtons();
+  document.getElementById("bigCardInfosButton").classList.add("big-card-info-button-choosen");
 }
 
-function renderBigCardAbout(event, index) {
+function renderBigCardInfosByClick(event, index) {
   event.stopPropagation();
+  renderBigCardInfos(index);
+}
+
+function renderBigCardAbout(index) {
   let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
   bigCartLowerContentRef.innerHTML = "";
   let aboutContent = getBigCardAboutContent(index);
   bigCartLowerContentRef.innerHTML = aboutContent;
   lastBigCardContent = "about";
+  removeHighlightingFromButtons();
+  document.getElementById("bigCardAboutButton").classList.add("big-card-info-button-choosen");
 }
 
-function renderBigCardStats(event, index) {
+function renderBigCardAboutByClick(event, index) {
   event.stopPropagation();
+  renderBigCardAbout(index);
+}
+
+function renderBigCardStats(index) {
   let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
   bigCartLowerContentRef.innerHTML = "";
   let statsContent = getBigCardStatsContent(index);
   bigCartLowerContentRef.innerHTML = statsContent;
   lastBigCardContent = "stats";
+  removeHighlightingFromButtons();
+  document.getElementById("bigCardStatsButton").classList.add("big-card-info-button-choosen");
 }
 
-function renderBigCardHabitat(event, index) {
+function renderBigCardStatsByClick(event, index) {
   event.stopPropagation();
+  renderBigCardStats(index);
+}
+
+function renderBigCardHabitat(index) {
   let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
   bigCartLowerContentRef.innerHTML = "";
   let habitat = getHabitat(index);
   let habitatContent = getBigCardHabitatContent(index, habitat);
   bigCartLowerContentRef.innerHTML = habitatContent;
   lastBigCardContent = "habitat";
+  removeHighlightingFromButtons();
+  document.getElementById("bigCardHabitatButton").classList.add("big-card-info-button-choosen");
+}
+
+function renderBigCardHabitatByClick(event, index) {
+  event.stopPropagation();
+  renderBigCardHabitat(index);
+}
+
+function removeHighlightingFromButtons() {
+  document.getElementById("bigCardInfosButton").classList.remove("big-card-info-button-choosen");
+  document.getElementById("bigCardAboutButton").classList.remove("big-card-info-button-choosen");
+  document.getElementById("bigCardStatsButton").classList.remove("big-card-info-button-choosen");
+  document.getElementById("bigCardHabitatButton").classList.remove("big-card-info-button-choosen");
 }
 
 // skip between big cards

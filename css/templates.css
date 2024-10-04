@@ -196,7 +196,7 @@
 .big-card-info-button:hover {
   color: var(--color-fontWhite);
 }
-.big-card-info-button:focus {
+.big-card-info-button-choosen {
   color: var(--color-fontWhite);
   text-decoration: underline;
 }

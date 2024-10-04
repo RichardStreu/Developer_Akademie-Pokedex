@@ -59,10 +59,12 @@ Welche Typen gibt es:
 
 - [x] skip funktion für große karten erstellen
 - [x] skip funktion ergänzen, sodass man endlos skippen kann
-- [ ] stats bei big card anpassen, sodass jedes stat per funktion aufgerufen wird und immer der letzte stat stehen bleibt (globale variable anlegen wo letztes stat gespeichert wird, und dann ruft man das entsprechende aktuelle nach der letzten global geseicherten auf)
+- [x] stats bei big card anpassen, sodass jedes stat per funktion aufgerufen wird und immer der letzte stat stehen bleibt (globale variable anlegen wo letztes stat gespeichert wird, und dann ruft man das entsprechende aktuelle nach der letzten global geseicherten auf)
 - [ ] hover effekt von smallCards überarbeiten
 - [ ] padding von main content container erhöhen, sodass ein nach oben pfeil rechts platz hat
 - [ ] nachObenPfeil rechts einbinden
 - [ ] funktion für nach obenpfeil rechts schreiben - [ ] so das er sichtbar wird wenn ein stück gescrollt wurde - [ ] das wieder nach oben gescrollt wird beim klicken
-- [ ] funktion schreiben, sodass immer die stats angezeigt werden und beim karte skippen oder neue karte öffnen, immer der zuletzt gezeigte stat gezeigt wird
+- [x] funktion schreiben, sodass immer die stats angezeigt werden und beim karte skippen oder neue karte öffnen, immer der zuletzt gezeigte stat gezeigt wird
 - [x] stats/info vom design fertig machen
+- [ ] refactoring renderAndShowBigCard()
+- [ ] responsive Ansicht!
