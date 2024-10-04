@@ -229,12 +229,13 @@
 }
 .weight-height-box {
   margin-top: 1.5rem;
-  height: 160px;
+  height: 120px;
   width: 260px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   border-radius: 1rem;
+  border: 1px solid var(--color-fontSmokeWhite);
 }
 .measure-box {
   width: 50%;
@@ -244,7 +245,7 @@
   color: var(--color-fontSmokeWhite);
 }
 .divider {
-  height: 36px;
+  height: 40px;
   width: 2px;
   background-color: var(--color-fontSmokeWhite);
 }
@@ -255,7 +256,7 @@
   color: white;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .measureNumber {
   display: flex;
