@@ -11,10 +11,8 @@ const P = new Pokedex.Pokedex(customOptions);
 // pokemons got from API when load the site first time. Then pokemons are saved in cache and will be got from there
 let pokemonsDataArray = [];
 let pokemonSpeciesArray = [];
-
 let currentPokemonsDataArray = [];
 let currentSpeciesDataArray = [];
-
 let lastBigCardContent = "";
 
 // funtions to show and hide loading spinner
@@ -54,8 +52,6 @@ async function loadKantoPokemons(start, end) {
 async function initLoadData(start, end) {
   showLoadingSpinner();
   await loadKantoPokemons(start, end);
-  // console.log(pokemonsDataArray);
-  // console.log(pokemonSpeciesArray);
   initRenderSmallCards(start, end);
   hideLoadingSpinner();
   document.getElementById("header").classList.add("position-fixed");
@@ -84,28 +80,20 @@ initLoadData(1, 20);
 // RENDER SMALL CARDS ######################################################################
 function initRenderSmallCards(start, end) {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
-  // let delay = 0;
   mainContentContainerRef.innerHTML = "";
   currentPokemonsDataArray = pokemonsDataArray;
   currentSpeciesDataArray = pokemonSpeciesArray;
-
   for (let index = start - 1; index < end; index++) {
     let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
     mainContentContainerRef.innerHTML += smallCard;
-    // delay += 100;
   }
 }
 
 function showRenderMoreCards(start, end) {
   let mainContentContainerRef = document.getElementById("mainContentContainer");
-  // let delay = 0;
-  // currentPokemonsDataArray = pokemonsDataArray;
-  // currentSpeciesDataArray = pokemonSpeciesArray;
-
   for (let index = start - 1; index < end; index++) {
     let smallCard = getSmallPokemonCard(currentPokemonsDataArray, currentSpeciesDataArray, index);
     mainContentContainerRef.innerHTML += smallCard;
-    // delay += 100;
   }
 }
 
