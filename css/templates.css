@@ -52,7 +52,7 @@
 }
 .pokemon-name {
   font-size: 1.25rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .small-card-main {
   display: flex;
@@ -142,11 +142,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 .big-card-name-box {
-  text-transform: capitalize;
+  text-transform: uppercase;
   display: flex;
   gap: 1rem;
 }
@@ -155,6 +155,7 @@
   transition: all 0.1s ease-in-out;
   user-select: none;
   font-size: 3rem;
+  transform: translateY(-2.5px);
 }
 .big-card-skip-backwards:hover {
   transform: scale(1.25);
@@ -165,6 +166,7 @@
   transition: all 0.1s ease-in-out;
   user-select: none;
   font-size: 3rem;
+  transform: translateY(-2.5px);
 }
 .big-card-skip-forwards:hover {
   transform: scale(1.25);
