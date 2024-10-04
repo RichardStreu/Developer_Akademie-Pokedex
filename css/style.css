@@ -178,4 +178,10 @@ main {
   .big-card-skip-forwards {
     font-size: 2.5rem;
   }
+  header .wrapper-content {
+    padding: 0px 8px;
+  }
+  .header-search-field {
+    width: 150px;
+  }
 }
