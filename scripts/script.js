@@ -129,9 +129,6 @@ function renderAndShowBigCard(index) {
   let bigCard = getBigPokemonCard(pokemonsDataArray, pokemonSpeciesArray, index, scrollY, habitat);
   dialogBigCardRef.innerHTML = bigCard;
   dialogBigCardRef.classList.remove("d-none");
-  console.log(currentPokemonsDataArray);
-  console.log(currentSpeciesDataArray);
-  console.log(habitat);
 }
 
 function closeAndHideBigCard() {
@@ -142,12 +139,20 @@ function closeAndHideBigCard() {
 
 // render big card content
 
+let lastBigCardContent = "infos";
+
+function renderBigCardContent(content, index) {
+  if (content == "about") {
+  }
+}
+
 function renderBigCardInfos(event, index) {
   event.stopPropagation();
   let bigCartLowerContentRef = document.getElementById("bigCartLowerContent");
   bigCartLowerContentRef.innerHTML = "";
   let infosContent = getBigCardInfosContent(index);
   bigCartLowerContentRef.innerHTML = infosContent;
+  lastBigCardContent = "infos";
 }
 
 function renderBigCardAbout(event, index) {
@@ -156,6 +161,7 @@ function renderBigCardAbout(event, index) {
   bigCartLowerContentRef.innerHTML = "";
   let aboutContent = getBigCardAboutContent(index);
   bigCartLowerContentRef.innerHTML = aboutContent;
+  lastBigCardContent = "about";
 }
 
 function renderBigCardStats(event, index) {
@@ -164,6 +170,7 @@ function renderBigCardStats(event, index) {
   bigCartLowerContentRef.innerHTML = "";
   let statsContent = getBigCardStatsContent(index);
   bigCartLowerContentRef.innerHTML = statsContent;
+  lastBigCardContent = "stats";
 }
 
 function renderBigCardHabitat(event, index) {
@@ -173,6 +180,7 @@ function renderBigCardHabitat(event, index) {
   let habitat = getHabitat(index);
   let habitatContent = getBigCardHabitatContent(index, habitat);
   bigCartLowerContentRef.innerHTML = habitatContent;
+  lastBigCardContent = "habitat";
 }
 
 // skip between big cards
