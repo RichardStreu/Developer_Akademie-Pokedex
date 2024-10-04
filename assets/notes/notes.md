@@ -67,4 +67,4 @@ Welche Typen gibt es:
 - [x] funktion schreiben, sodass immer die stats angezeigt werden und beim karte skippen oder neue karte öffnen, immer der zuletzt gezeigte stat gezeigt wird
 - [x] stats/info vom design fertig machen
 - [ ] refactoring renderAndShowBigCard()
-- [ ] responsive Ansicht!
+- [x] responsive Ansicht!
