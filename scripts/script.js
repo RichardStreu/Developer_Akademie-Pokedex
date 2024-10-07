@@ -15,7 +15,7 @@ let currentPokemonsDataArray = [];
 let currentSpeciesDataArray = [];
 let lastBigCardContent = "";
 
-// funtions to show and hide loading spinner
+// funtions show and hide loading spinner
 
 function showLoadingSpinner() {
   document.getElementById("dialogLoadingSpinner").classList.remove("d-none");
