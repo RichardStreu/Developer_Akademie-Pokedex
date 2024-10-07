@@ -3,7 +3,6 @@
   padding: 0;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "roboto";
   color: var(--color-fontColor);
@@ -11,7 +10,6 @@ body {
   /* overflow-x: hidden; */
   background-color: rgb(43, 43, 43);
 }
-
 .wrapper-content {
   max-width: 1440px;
   width: 100%;
@@ -20,19 +18,15 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .d-none {
   display: none;
 }
-
 .position-fixed {
   position: fixed;
 }
-
 .flex-column {
   flex-direction: column;
 }
-
 .flex-row {
   flex-direction: row;
 }
